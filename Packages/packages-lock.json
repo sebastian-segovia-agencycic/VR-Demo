@@ -1,14 +1,14 @@
 {
   "dependencies": {
     "com.readyplayerme.core": {
-      "version": "https://github.com/readyplayerme/rpm-unity-sdk-core.git#develop",
+      "version": "https://github.com/readyplayerme/rpm-unity-sdk-core.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.cloud.gltfast": "6.0.1",
         "com.unity.nuget.newtonsoft-json": "3.0.2"
       },
-      "hash": "08a01f83eca5484a60b727f4ee781723efa8a6bf"
+      "hash": "dc0efc3ec8796175d3a34773076054ad398ea704"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
