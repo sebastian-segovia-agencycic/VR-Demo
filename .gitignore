@@ -80,3 +80,4 @@ rpmvrdemo.keystore
 
 # Exclude FinalIK package from sample
 /[Aa]ssets/Plugins/RootMotion*
+.idea/

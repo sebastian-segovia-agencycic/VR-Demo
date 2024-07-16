@@ -22,8 +22,7 @@ namespace ReadyPlayerMe.XR
             }
 
             var avatarData = gameObject.GetComponent<AvatarData>();
-            animator.avatar = AvatarAnimationHelper.GetAnimationAvatar(avatarData.AvatarMetadata.OutfitGender,
-                avatarData.AvatarMetadata.BodyType);
+            animator.avatar = AvatarAnimationHelper.GetAnimationAvatar(avatarData.AvatarMetadata);
 
             if (vrik.references.root == null)
             {
