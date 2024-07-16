@@ -20,9 +20,7 @@ namespace ReadyPlayerMe.XR
         [SerializeField] private List<AssetSelectionUI> assetSelectionElementUis;
 
         [SerializeField] private UnityEvent<AvatarProperties> onTemplateSelected;
-
-
-        private readonly BodyType bodyType = BodyType.FullBodyXR;
+        
         private AvatarManager avatarManager;
 
         private OutfitGender gender = OutfitGender.None;
