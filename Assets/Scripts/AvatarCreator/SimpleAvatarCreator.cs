@@ -20,9 +20,7 @@ namespace ReadyPlayerMe.XR
         [SerializeField] private List<AssetSelectionUI> assetSelectionElementUis;
 
         [SerializeField] private UnityEvent<AvatarProperties> onTemplateSelected;
-
-
-        private readonly BodyType bodyType = BodyType.FullBodyXR;
+        
         private AvatarManager avatarManager;
 
         private OutfitGender gender = OutfitGender.None;
@@ -66,7 +64,7 @@ namespace ReadyPlayerMe.XR
         public async void OnAssetSelection(IAssetData assetData)
         {
             loading.SetActive(true);
-            var updatedAvatar = await avatarManager.UpdateAsset(assetData.AssetType, bodyType, assetData.Id);
+            var updatedAvatar = await avatarManager.UpdateAsset(assetData.AssetType, assetData.Id);
             UpdateAvatar(updatedAvatar);
             loading.SetActive(false);
         }
@@ -85,7 +83,7 @@ namespace ReadyPlayerMe.XR
 
         private async Task<AvatarProperties> GetAvatar(AvatarTemplateData avatarTemplate)
         {
-            var templateAvatarProps = await avatarManager.CreateAvatarFromTemplateAsync(avatarTemplate.Id, bodyType);
+            var templateAvatarProps = await avatarManager.CreateAvatarFromTemplateAsync(avatarTemplate.Id);
             var avatarProperties = templateAvatarProps.Properties;
 
             TransferAvatarData(avatarProperties.Id, new AvatarMetadata
