@@ -206,7 +206,7 @@ namespace ReadyPlayerMe.XR
 
             var avatarLoaderSettings = AvatarLoaderSettings.LoadSettings();
             var paramHash = AvatarCache.GetAvatarConfigurationHash(avatarLoaderSettings.AvatarConfig);
-            var path = $"{DirectoryUtility.GetRelativeProjectPath(args.Avatar.name, paramHash)}/{args.Avatar.name}";
+            var path = $"{DirectoryUtility.GetAvatarSaveDirectory(args.Avatar.name, paramHash)}/{args.Avatar.name}";
             if (!avatarLoaderSettings.AvatarCachingEnabled)
             {
                 SDKLogger.LogWarning("AvatarPerformanceGenerator",
